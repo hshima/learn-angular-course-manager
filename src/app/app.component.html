@@ -1,19 +1,19 @@
 <h1>Módulos e componentes</h1><br />
-<!-- Interpolação - Capacidade de aplicar elementos utilizando chaves como atributos
+<!-- Interpoation - capacity of element based on use of two brackets as attributes
 -->
 {{title}}<br />
 {{name}}
 
-<!-- One way databind e Two way Databind -->
-<!-- Aplicação de one way databind através de [ngModel] -> apenas exibe o atributo, sem alterar o valor da propriedade  -->
+<!-- One way databind and Two way Databind -->
+<!-- One Way DataBind is used through [ngModel] -> Shows solely attributes, not changing it  -->
 <h2>Sem alteração de atributo {{name}}</h2>
 <input [ngModel]="name" name="name" placeholder="Apenas exibe, mas não altera o atributo"><br />
-<!-- Aplicando essa tag, será apresentado problema, pois é necessário importar o módulo de formulários -->
+<!-- before aplying the tag above, it is needed to import FormsModule in the app.module.ts file, at the import array -->
 
-<!-- Aplicação de two way databind através de [(ngModel)] -> apenas exibe o atributo e altera todas as referências do atributo  -->
+<!-- Two Way DataBind is used through [(ngModel)] -> Shows attributes and apply changes   -->
 <h2>Aplica alteração de atributo {{name2}} ao digitar</h2>
 <input [(ngModel)]="name2" name="name2" placeholder="Exibe e altera o atributo"><br />
-<!-- Aplicando essa tag, será apresentado problema, pois é necessário importar o módulo de formulários -->
+<!-- before aplying the tag above, it is needed to import FormsModule in the app.module.ts file, at the import array -->
 
 <hr />
 <h1>Criação de componentes e construção de projeto</h1><br />
