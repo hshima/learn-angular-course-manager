@@ -1,13 +1,23 @@
+<h1>Módulos e componentes</h1><br />
 <!-- Interpolação - Capacidade de aplicar elementos utilizando chaves como atributos
 -->
 {{title}}<br />
-{{name}} 
+{{name}}
 
 <!-- One way databind e Two way Databind -->
 <!-- Aplicação de one way databind através de [ngModel] -> apenas exibe o atributo, sem alterar o valor da propriedade  -->
-<h2>Sem alteração de atributo {{name}}</h2><br />
-<input [ngModel]="name" name = "name" placeholder="Apenas exibe, mas não altera o atributo"><br /> <!-- Aplicando essa tag, será apresentado problema, pois é necessário importar o módulo de formulários -->
+<h2>Sem alteração de atributo {{name}}</h2>
+<input [ngModel]="name" name="name" placeholder="Apenas exibe, mas não altera o atributo"><br />
+<!-- Aplicando essa tag, será apresentado problema, pois é necessário importar o módulo de formulários -->
 
 <!-- Aplicação de two way databind através de [(ngModel)] -> apenas exibe o atributo e altera todas as referências do atributo  -->
-<h2>Sem alteração de atributo {{name2}}</h2><br />
-<input [(ngModel)]="name2" name = "name2" placeholder="Exibe e altera o atributo"><br /> <!-- Aplicando essa tag, será apresentado problema, pois é necessário importar o módulo de formulários -->
+<h2>Aplica alteração de atributo {{name2}} ao digitar</h2>
+<input [(ngModel)]="name2" name="name2" placeholder="Exibe e altera o atributo"><br />
+<!-- Aplicando essa tag, será apresentado problema, pois é necessário importar o módulo de formulários -->
+
+<hr />
+<h1>Criação de componentes e construção de projeto</h1><br />
+<app-course-list></app-course-list>
+<!-- By setting this component's name, Angular will access app.module.ts, searching for a reference to CourseListComponent, reaching course-list.component.ts from exported class -->
+
+<hr />
