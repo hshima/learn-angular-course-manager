@@ -1,23 +1,26 @@
-<h1>Módulos e componentes</h1><br />
-<!-- Interpoation - capacity of element based on use of two brackets as attributes
+<div class="container">
+  <h1>Módulos e componentes</h1><br />
+  <!-- Interpolation - capacity of element based on use of two brackets as attributes
 -->
-{{title}}<br />
-{{name}}
+  {{title}}<br />
+  {{name}}
 
-<!-- One way databind and Two way Databind -->
-<!-- One Way DataBind is used through [ngModel] -> Shows solely attributes, not changing it  -->
-<h2>Sem alteração de atributo {{name}}</h2>
-<input [ngModel]="name" name="name" placeholder="Apenas exibe, mas não altera o atributo"><br />
-<!-- before aplying the tag above, it is needed to import FormsModule in the app.module.ts file, at the import array -->
+  <!-- One way databind and Two way Databind -->
+  <!-- One Way DataBind is used through [ngModel] -> Shows solely attributes, not changing it  -->
+  <h2>Sem alteração de atributo {{name}}</h2>
+  <input [ngModel]="name" name="name" placeholder="Apenas exibe, mas não altera o atributo"><br />
+  <!-- before aplying the tag above, it is needed to import FormsModule in the app.module.ts file, at the import array -->
 
-<!-- Two Way DataBind is used through [(ngModel)] -> Shows attributes and apply changes   -->
-<h2>Aplica alteração de atributo {{name2}} ao digitar</h2>
-<input [(ngModel)]="name2" name="name2" placeholder="Exibe e altera o atributo"><br />
-<!-- before aplying the tag above, it is needed to import FormsModule in the app.module.ts file, at the import array -->
-
+  <!-- Two Way DataBind is used through [(ngModel)] -> Shows attributes and apply changes   -->
+  <h2>Aplica alteração de atributo {{name2}} ao digitar</h2>
+  <input [(ngModel)]="name2" name="name2" placeholder="Exibe e altera o atributo"><br />
+  <!-- before aplying the tag above, it is needed to import FormsModule in the app.module.ts file, at the import array -->
 <hr />
-<h1>Criação de componentes e construção de projeto</h1><br />
-<app-course-list></app-course-list>
+  <h1>Criação de componentes e construção de projeto</h1><br />
+  <app-course-list></app-course-list>
 <!-- By setting this component's name, Angular will access app.module.ts, searching for a reference to CourseListComponent, reaching course-list.component.ts from exported class -->
 
 <hr />
+  <h2>Teste de Bootstrap</h2>
+  <app-course-list></app-course-list>
+</div>
