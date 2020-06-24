@@ -1,0 +1,3 @@
+.crop{ /* Allows selection of style applied */
+    overflow: hidden; /* overflow property controls what happens to content that is too big to fit into an area. */
+}

@@ -22,7 +22,7 @@ export class CourseListComponent implements OnInit {
                 price: 99.99,
                 code: 'QWERTY',
                 duration: 120,
-                rating: 5.4,
+                rating: 3.4,
                 releasedDate: 'December, 2, 2019'
             },
             {
@@ -32,7 +32,7 @@ export class CourseListComponent implements OnInit {
                 price: 57.99,
                 code: 'WERTYU',
                 duration: 80,
-                rating: 5.5,
+                rating: 4.5,
                 releasedDate: 'December, 4, 2019'
             }
         ]
