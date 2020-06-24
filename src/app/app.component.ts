@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'learn-angular-course-manager';
   name: string = 'João';
+  name2: string = 'Pedro';
 }

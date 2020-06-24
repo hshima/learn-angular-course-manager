@@ -4,5 +4,10 @@
 {{name}} 
 
 <!-- One way databind e Two way Databind -->
-<!-- Aplicando essa tag, será apresentado problema, pois é necessário importar o módulo de formulários -->
-<input [ngModel]='name' name = 'name' > 
+<!-- Aplicação de one way databind através de [ngModel] -> apenas exibe o atributo, sem alterar o valor da propriedade  -->
+<h2>Sem alteração de atributo {{name}}</h2><br />
+<input [ngModel]="name" name = "name" placeholder="Apenas exibe, mas não altera o atributo"><br /> <!-- Aplicando essa tag, será apresentado problema, pois é necessário importar o módulo de formulários -->
+
+<!-- Aplicação de two way databind através de [(ngModel)] -> apenas exibe o atributo e altera todas as referências do atributo  -->
+<h2>Sem alteração de atributo {{name2}}</h2><br />
+<input [(ngModel)]="name2" name = "name2" placeholder="Exibe e altera o atributo"><br /> <!-- Aplicando essa tag, será apresentado problema, pois é necessário importar o módulo de formulários -->
