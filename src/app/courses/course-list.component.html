@@ -37,8 +37,8 @@
                 <!-- so attributes can be loaded, it must be invoked as ordered array [] and than, the other object -->
                 <td>{{course.name}}</td>
                 <td>{{course.price}}</td>
-                <td>{{course.code}}</td>
-                <td>{{course.releasedDate}}</td>
+                <td>{{course.code | lowercase | replace: '-':' '}}</td> <!-- Apply native pipe lowercase, then aplies created logic -->
+                <td>{{course.releaseDate | date: 'dd/MM/yyyy'}}</td> <!-- Apply native pipe date -->
                 <td>
                     <app-star [rating]="course.rating"></app-star>
                 </td>
