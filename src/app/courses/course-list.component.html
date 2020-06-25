@@ -1,12 +1,22 @@
 <div>
     <h2>Course List</h2>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Filter by:</label>
+        <div class="col-sm-10">
+            <input [(ngModel)]="filter" class="form-control">
+        </div>
+    </div>
     <h3><b>What is Lorem Ipsum?</b></h3>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+        industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+        make
         a
         type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+        containing
+        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
+        versions
         of
         Lorem Ipsum.</p>
     <table class="table striped-table">
@@ -22,7 +32,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let course of courses">
+            <tr *ngFor="let course of filteredCourses">
                 <td><img [src]="course.imageURL" width="40" height="40"></td>
                 <!-- so attributes can be loaded, it must be invoked as ordered array [] and than, the other object -->
                 <td>{{course.name}}</td>
@@ -36,4 +46,5 @@
             </tr>
         </tbody>
     </table>
+
 </div>

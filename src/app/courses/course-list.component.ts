@@ -13,15 +13,25 @@ export class CourseListComponent implements OnInit {
     // 'export' Allows class to other files to reference this class
     // Interface OnInit inicia o componente assim que criado
 
-    courses: Course[] = [];
+    _courses: Course[] = [];
+
+    _filterBy: string;
 
     constructor(private courseService: CourseService) { // By finding a constructor of the same type as an electible one, a instance of the constructor type shall be injected
 
     }
 
-    ngOnInit(): void { //permite adicionar tarefas para inicialização do componente da interface
-
-        this.courses = this.courseService.retrieveAll();
+    filteredCourses: Course[] = [];
+    ngOnInit(): void { // Allows adition of initialization tasks in the Component Interface
+        this._courses = this.courseService.retrieveAll();
+        this.filteredCourses = this._courses.filter((course: Course) => course.name.toLowerCase().indexOf(this._filterBy.toLocaleLowerCase()));
     }
 
+    set filter(value: string){
+        this._filterBy = value;
+    }
+
+    get filter(){
+        return this._filterBy;
+    }
 }
