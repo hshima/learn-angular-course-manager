@@ -1,4 +1,6 @@
-<div class="container">
+<app-nav-bar></app-nav-bar>
+
+<div class="container mt-4">
   <h1>Módulos e componentes</h1><br />
   <!-- Interpolation - capacity of element based on use of two brackets as attributes
 -->
@@ -17,7 +19,5 @@
   <!-- before aplying the tag above, it is needed to import FormsModule in the app.module.ts file, at the import array -->
 <hr />
   <h1>Criação de componentes e construção de projeto</h1><br />
-  <app-course-list></app-course-list>
-<!-- By setting this component's name, Angular will access app.module.ts, searching for a reference to CourseListComponent, reaching course-list.component.ts from exported class -->
-
+  <router-outlet></router-outlet> <!-- from this point on, Angular is shown from this point on -->
 </div>
