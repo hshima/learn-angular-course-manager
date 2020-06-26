@@ -27,14 +27,13 @@ import { Error404Component } from './error-404/error-404.component';
         path: '', redirectTo: 'courses', pathMatch: 'full' // When in the root of the aplication (''), redirect to route courses. The path match must be full (specific case for routes)
       },
       {
-        pathMatch: 'courses', component: CourseListComponent // makes the use of select not mandatory, in classes
+        path: 'courses', component: CourseListComponent // makes the use of select not mandatory, in classes
       },
       {
         path: '**', component: Error404Component
       }
-    ]),
+    ], { enableTracing: true }),
   ],
-  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })

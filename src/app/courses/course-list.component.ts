@@ -3,7 +3,7 @@ import { Course } from './course';
 import { CourseService } from './course.service';
 
 @Component({
-    templateUrl: './course-list.component.html' // Aplies reponsibility segregation, so static content won't be stored in this code
+    selector: 'app-course-list',templateUrl: './course-list.component.html' // Aplies reponsibility segregation, so static content won't be stored in this code
 })
 
 export class CourseListComponent implements OnInit {
