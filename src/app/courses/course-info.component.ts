@@ -23,5 +23,8 @@ export class CourseInfoComponent implements OnInit {
                 .get('id') // which matches the id
         )
     }
+    save(): void{
+        this.courseService.save(this.course);
+    }
 
 }
