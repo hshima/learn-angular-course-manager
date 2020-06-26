@@ -42,6 +42,9 @@
                 <td>
                     <app-star [rating]="course.rating"></app-star>
                 </td>
+                <td>
+                    <a [routerLink]="['./info', course.id]" class="btn btn-primary">Edit</a> <!-- Allows insert of a external link -->
+                </td>
                 <!--td>{{course.options}</td-->
             </tr>
         </tbody>

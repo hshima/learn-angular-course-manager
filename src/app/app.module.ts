@@ -9,6 +9,7 @@ import { StarComponent } from './courses/star/star.component';
 import { ReplacePipe } from './pipe/replace.pipe';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { Error404Component } from './error-404/error-404.component';
+import { CourseInfoComponent } from './courses/course-info.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { Error404Component } from './error-404/error-404.component';
     StarComponent,
     ReplacePipe, // Imports created pipe to the project
     NavBarComponent,
-    Error404Component
+    Error404Component,
+    CourseInfoComponent
   ],
   imports: [ // Imports only modules
     BrowserModule,
@@ -30,7 +32,10 @@ import { Error404Component } from './error-404/error-404.component';
         path: 'courses', component: CourseListComponent // makes the use of select not mandatory, in classes
       },
       {
-        path: '**', component: Error404Component
+        path: 'courses/info/:id', component: CourseInfoComponent // Explicits that an attribute shall be passed in the request by preceding with ':'
+      },
+      {
+        path: '**', component: Error404Component // Adds an generic path for not found components
       }
     ], { enableTracing: true }),
   ],
