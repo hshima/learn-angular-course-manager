@@ -11,20 +11,27 @@ export class CourseInfoComponent implements OnInit {
     course: Course;
 
     constructor(
-        private activeRoute: ActivatedRoute,
+        private activatedRoute: ActivatedRoute,
         private courseService: CourseService) { }
 
     ngOnInit(): void {
-        this.course = this.courseService.retrieveById(
+        this.courseService.retrieveById(
             + //converts a string to number
-            this.activeRoute // From the actual route,
+            this.activatedRoute // From the actual route,
                 .snapshot // take a snapshot from the object
                 .paramMap // from the object, take parameters
                 .get('id') // which matches the id
-        )
+        ).subscribe({
+            next: courses => this.course = courses,
+            error: err => console.log('Error: ' + err)
+        });
     }
-    save(): void{
-        this.courseService.save(this.course);
+    save(): void {
+        this.courseService.save(this.course)
+        .subscribe({
+            next: course => console.log('Saved with Success'),
+            error: err => console.log('Erro: '+ err)
+        });
     }
 
 }

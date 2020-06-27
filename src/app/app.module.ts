@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; //Inclusão do módulo Formu
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { CourseListComponent } from './courses/course-list.component';
@@ -24,6 +25,7 @@ import { CourseInfoComponent } from './courses/course-info.component';
   imports: [ // Imports only modules
     BrowserModule,
     FormsModule, // Module implementation to be imported
+    HttpClientModule,
     RouterModule.forRoot([ // Declares an array of routes that will be initalized by the begining of the aplication
       {
         path: '', redirectTo: 'courses', pathMatch: 'full' // When in the root of the aplication (''), redirect to route courses. The path match must be full (specific case for routes)
@@ -37,7 +39,7 @@ import { CourseInfoComponent } from './courses/course-info.component';
       {
         path: '**', component: Error404Component // Adds an generic path for not found components
       }
-    ], { enableTracing: true }),
+    ]/*, { enableTracing: true }*/),
   ],
   providers: [],
   bootstrap: [AppComponent]
