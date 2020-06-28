@@ -56,7 +56,7 @@
         [disabled]="courseform.invalid" validates if any of the forms elements is invalid and makes it not submitable
         (click)="save" calls a save(), defined in the course-info.component.ts
     -->
-    <button [disabled]="courseForm.invalid" (click)="save" class="btn btn-primary mr-2">Save</button>
+    <button [disabled]="courseForm.invalid" (click)="save()" [routerLink]="['/courses']" class="btn btn-primary mr-2">Save</button>
     <!--
         [routerLink]="['/courses']" takes back to the courses page
     -->
